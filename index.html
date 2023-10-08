@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login page</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+      .background{
+    text-align:center;
+
+    
+    
+}
+h1{
+    text-align:center;
+}
+body{
+    background-color: blanchedalmond;
+}
+    </style>
+
+</head>
+<body>
+    <h1>Sign UP</h1>
+    <table border="1">
+        <tr>
+    <form name="myform">
+    <div class="background">
+        <p>Email <input type="text" class="Email" placeholder="Enter your Email"/></p>
+        
+        <p>Password  <input type="text" class="password" placeholder="Enter your password"></p>
+     
+
+      <input type="submit" value="signup"  onsubmit="return validateform()">
+    </form>
+    </tr>
+    </table>
+
+
+    <script>  
+        function validateform(){  
+        var name=document.myform.name.value;  
+        var password=document.myform.password.value;  
+          
+        if (name==null || name==""){  
+          alert("Name can't be blank");  
+          return false;  
+        }else if(password.length<6){  
+          alert("Password must be at least 6 characters long.");  
+          return false;  
+          }  
+        }  
+        </script> 
+         
+    <script src="login.js"></script>
+</body>
+</html>
